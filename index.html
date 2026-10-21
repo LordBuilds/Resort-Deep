@@ -4,242 +4,441 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resort Deep | Escape to Nature</title>
-  <meta name="description" content="Discover Resort Deep, your peaceful escape into nature. Explore our resort and plan your stay.">
+  <meta name="description" content="Discover Resort Deep, a peaceful luxury-inspired escape surrounded by nature.">
+  <title>Resort Deep | Escape Into Nature</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --green: #102a23;
+      --green-light: #244b3d;
+      --gold: #c7a66a;
+      --cream: #f6f3eb;
+      --text: #e9e8df;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      color: #fff;
-      background: #101b18;
-      line-height: 1.6;
+      background: var(--cream);
+      color: #202c25;
+      font-family: "DM Sans", sans-serif;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 8%;
-      background: #101b18;
-    }
-
-    .logo {
-      font-size: 25px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    nav a {
-      color: white;
+    a {
+      color: inherit;
       text-decoration: none;
-      margin-left: 22px;
     }
 
     .hero {
-      min-height: 82vh;
+      min-height: 100vh;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(7, 24, 18, .82), rgba(7, 24, 18, .12)),
+        linear-gradient(0deg, rgba(7, 24, 18, .48), transparent 55%),
+        url("https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=2200&q=85")
+        center/cover no-repeat;
+      position: relative;
+    }
+
+    nav {
+      min-height: 90px;
+      padding: 24px 8%;
       display: flex;
       align-items: center;
-      padding: 70px 10%;
-      background:
-        linear-gradient(90deg, rgba(8, 20, 16, .85), rgba(8, 20, 16, .15)),
-        url("https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,.18);
     }
 
-    .hero-content {
-      max-width: 620px;
+    .logo {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 32px;
+      letter-spacing: 2px;
     }
 
-    .eyebrow {
-      color: #d5bd88;
-      text-transform: uppercase;
-      letter-spacing: 4px;
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
       font-size: 13px;
     }
 
-    h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(44px, 7vw, 78px);
-      line-height: 1.08;
-      margin: 20px 0;
+    .nav-links a:hover {
+      color: var(--gold);
     }
 
-    .hero p {
+    .nav-cta {
+      border: 1px solid var(--gold);
+      padding: 13px 20px;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      padding: 150px 8% 120px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: clamp(58px, 8vw, 105px);
+      line-height: .98;
+      letter-spacing: -2px;
+      max-width: 780px;
+    }
+
+    h1 em {
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    .hero-content p {
       max-width: 460px;
-      color: #e3e8e4;
-      font-size: 17px;
+      margin-top: 28px;
+      color: #e1e5dd;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 35px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 28px;
-      padding: 14px 25px;
-      background: #c6a66b;
-      color: #17211b;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 3px;
+      padding: 16px 25px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: .25s;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #17251d;
+    }
+
+    .btn-gold:hover {
+      background: #e0c38b;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.6);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .scroll-note {
+      position: absolute;
+      right: 8%;
+      bottom: 38px;
+      color: #e1e5dd;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
 
     section {
-      padding: 75px 10%;
-      text-align: center;
-    }
-
-    section h2 {
-      font-family: Georgia, serif;
-      font-size: 38px;
-      margin-bottom: 15px;
+      padding: 110px 8%;
     }
 
     .intro {
-      max-width: 650px;
-      margin: 0 auto;
-      color: #c8d0cb;
+      background: var(--cream);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .intro h2, .section-heading h2, .contact h2 {
+      font-size: clamp(42px, 5vw, 66px);
+      line-height: 1.05;
+    }
+
+    .intro h2 em, .section-heading h2 em {
+      color: #8a744b;
+    }
+
+    .intro-copy {
+      color: #626b61;
+      line-height: 1.9;
+      font-size: 14px;
+    }
+
+    .intro-copy p + p {
+      margin-top: 18px;
     }
 
     .features {
+      background: var(--green);
+      color: var(--text);
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 55px;
+    }
+
+    .section-heading > p:last-child {
+      color: #b8c4ba;
+      line-height: 1.8;
+      margin-top: 18px;
+      font-size: 14px;
+    }
+
+    .feature-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-top: 40px;
+      gap: 25px;
     }
 
-    .feature {
-      padding: 28px 20px;
-      border: 1px solid #35453c;
-      border-radius: 6px;
+    .feature-card {
+      border: 1px solid rgba(255,255,255,.13);
+      padding: 35px 28px;
+      transition: .25s;
     }
 
-    .feature .symbol {
-      font-size: 30px;
+    .feature-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
     }
 
-    .feature h3 {
-      margin: 12px 0 8px;
-      color: #e0c28a;
+    .feature-number {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 2px;
     }
 
-    .feature p {
-      color: #c8d0cb;
-      font-size: 15px;
+    .feature-card h3 {
+      font-size: 29px;
+      margin: 25px 0 13px;
     }
 
-    #contact {
-      background: #1b2b24;
+    .feature-card p {
+      color: #b8c4ba;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .contact {
+      background: #e9e5d9;
+      text-align: center;
+    }
+
+    .contact h2 {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .contact > p:not(.eyebrow) {
+      max-width: 490px;
+      margin: 22px auto 30px;
+      color: #626b61;
+      line-height: 1.8;
+      font-size: 14px;
     }
 
     footer {
-      padding: 25px;
-      text-align: center;
-      color: #aab8af;
-      font-size: 13px;
+      background: #0a1e18;
+      color: #c4cec5;
+      padding: 28px 8%;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 11px;
+      letter-spacing: .5px;
     }
 
-    @media (max-width: 650px) {
+    footer span {
+      color: var(--gold);
+    }
+
+    @media (max-width: 760px) {
       nav {
-        padding: 18px 5%;
+        padding: 22px 6%;
       }
 
-      nav a {
-        margin-left: 10px;
-        font-size: 13px;
+      .nav-links {
+        gap: 14px;
       }
 
-      .hero {
-        min-height: 75vh;
-        padding: 55px 7%;
+      .nav-links a:not(.nav-cta) {
+        display: none;
       }
 
-      .features {
-        grid-template-columns: 1fr;
+      .hero-content {
+        padding: 140px 6% 120px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
       }
 
       section {
-        padding: 55px 7%;
+        padding: 75px 6%;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .scroll-note {
+        display: none;
+      }
+
+      footer {
+        padding: 25px 6%;
       }
     }
   </style>
 </head>
 
 <body>
-  <nav>
-    <div class="logo">RESORT DEEP</div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#stay">Experience</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+  <header class="hero" id="home">
+    <nav>
+      <a class="logo" href="#home">RESORT <span>DEEP.</span></a>
 
-  <header class="hero">
+      <div class="nav-links">
+        <a href="#about">Our Story</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#contact" class="nav-cta">Enquire Now ↗</a>
+      </div>
+    </nav>
+
     <div class="hero-content">
-      <div class="eyebrow">Your peaceful escape</div>
-      <h1>Find your own kind of paradise.</h1>
+      <p class="eyebrow">A quieter kind of luxury</p>
+      <h1>Escape the ordinary.<br><em>Find your calm.</em></h1>
       <p>
-        Step away from the everyday and discover a place
-        where nature, comfort, and unforgettable moments
-        come together.
+        Step away from the everyday and discover a slower rhythm,
+        surrounded by nature, thoughtful design, and moments worth remembering.
       </p>
-      <a class="btn" href="#contact">Plan Your Stay</a>
+
+      <div class="actions">
+        <a href="#experiences" class="btn btn-gold">Discover the experience ↗</a>
+        <a href="#about" class="btn btn-outline">Explore Resort Deep</a>
+      </div>
     </div>
+
+    <div class="scroll-note">A place to breathe ↓</div>
   </header>
 
-  <section id="about">
-    <p class="eyebrow">Welcome to Resort Deep</p>
-    <h2>More than a getaway.</h2>
-    <p class="intro">
-      A thoughtfully designed resort experience for slowing
-      down, reconnecting with nature, and making time for
-      the moments that matter.
-    </p>
-  </section>
+  <main>
+    <section class="intro" id="about">
+      <div>
+        <p class="eyebrow">Welcome to Resort Deep</p>
+        <h2>Luxury isn't more.<br><em>It's feeling more.</em></h2>
+      </div>
 
-  <section id="stay">
-    <p class="eyebrow">Discover your escape</p>
-    <h2>The experience</h2>
+      <div class="intro-copy">
+        <p>
+          Imagine mornings without a rush, evenings wrapped in quiet,
+          and the simple pleasure of being somewhere that lets you slow down.
+        </p>
+        <p>
+          Resort Deep is a luxury-inspired website concept built around
+          nature, comfort, and meaningful escapes.
+        </p>
+      </div>
+    </section>
 
-    <div class="features">
-      <article class="feature">
-        <div class="symbol">🌿</div>
-        <h3>Nature & Calm</h3>
-        <p>Find a little more space to breathe, relax, and recharge.</p>
-      </article>
+    <section class="features" id="experiences">
+      <div class="section-heading">
+        <p class="eyebrow">The experience</p>
+        <h2>Space to <em>reconnect.</em></h2>
+        <p>
+          Thoughtful details. Unhurried moments. A different way
+          to experience your time away.
+        </p>
+      </div>
 
-      <article class="feature">
-        <div class="symbol">🛏️</div>
-        <h3>Comfortable Stays</h3>
-        <p>A welcoming place to unwind after a day of exploring.</p>
-      </article>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-number">01 / NATURE</span>
+          <h3>Closer to nature</h3>
+          <p>
+            Imagine peaceful landscapes, fresh air, and a welcome
+            break from the noise of everyday life.
+          </p>
+        </article>
 
-      <article class="feature">
-        <div class="symbol">✨</div>
-        <h3>Special Moments</h3>
-        <p>Make room for memorable experiences with your favourite people.</p>
-      </article>
-    </div>
-  </section>
+        <article class="feature-card">
+          <span class="feature-number">02 / COMFORT</span>
+          <h3>Thoughtful comfort</h3>
+          <p>
+            Explore a vision of warm interiors, understated elegance,
+            and spaces designed to help you unwind.
+          </p>
+        </article>
 
-  <section id="contact">
-    <p class="eyebrow">Your next escape awaits</p>
-    <h2>Let's plan your stay.</h2>
-    <p class="intro">
-      Interested in visiting Resort Deep? Get in touch to
-      enquire about your stay.
-    </p>
-    <a class="btn" href="mailto:hello@example.com?subject=Resort%20Deep%20Enquiry">
-      Send an Enquiry
-    </a>
-  </section>
+        <article class="feature-card">
+          <span class="feature-number">03 / MOMENTS</span>
+          <h3>Made to remember</h3>
+          <p>
+            Picture slow mornings, meaningful conversations,
+            and little moments that stay with you.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <p class="eyebrow">Your escape starts here</p>
+      <h2>Some places make you wish you could stay longer.</h2>
+      <p>
+        Interested in Resort Deep? Get in touch to learn more
+        about the concept and discuss a potential stay.
+      </p>
+      <a class="btn btn-gold"
+         href="mailto:hello@example.com?subject=Resort%20Deep%20Enquiry">
+        Make an enquiry ↗
+      </a>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Resort Deep · Website concept
+    <div>RESORT <span>DEEP.</span></div>
+    <div>Website concept · © 2026 Resort Deep</div>
   </footer>
 </body>
 </html>
