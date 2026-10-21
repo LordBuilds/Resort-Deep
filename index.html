@@ -2,151 +2,422 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover Resort Deep, a peaceful luxury escape surrounded by nature.">
-  <title>Resort Deep | Escape to Nature</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --forest: #173b30;
-      --deep: #102b23;
-      --gold: #d6b77a;
-      --cream: #f7f5ef;
-      --ink: #20352d;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Discover Resort Deep, a peaceful luxury escape surrounded by nature.">
+<title>Resort Deep | Luxury in Nature</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--cream); }
-    a { color: inherit; text-decoration: none; }
-    .nav {
-      height: 82px; padding: 0 7%; display: flex; align-items: center;
-      justify-content: space-between; background: var(--deep); color: white;
-    }
-    .logo { font-family: 'Cormorant Garamond', serif; font-size: 32px; letter-spacing: 2px; }
-    .logo span { color: var(--gold); }
-    .nav-links { display: flex; gap: 28px; align-items: center; font-size: 12px; letter-spacing: 1px; }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-cta { border: 1px solid var(--gold); padding: 12px 17px; }
-    .hero {
-      min-height: 650px; display: flex; align-items: center; padding: 90px 9%;
-      color: white; background:
-        linear-gradient(90deg, rgba(9,28,22,.86), rgba(9,28,22,.22)),
-        url('https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=2000&q=85') center/cover;
-    }
-    .hero-content { max-width: 680px; animation: rise 1s ease both; }
-    .eyebrow { color: var(--gold); letter-spacing: 4px; text-transform: uppercase; font-size: 11px; font-weight: 700; }
-    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(58px, 8vw, 100px); line-height: .98; font-weight: 500; margin: 25px 0; }
-    .hero p { color: #e6e8e1; line-height: 1.9; max-width: 490px; font-size: 15px; }
-    .btn { display: inline-block; padding: 16px 25px; background: var(--gold); color: var(--deep); font-weight: 700; font-size: 12px; letter-spacing: 1px; margin-top: 32px; transition: .25s; }
-    .btn:hover { transform: translateY(-3px); background: white; }
-    section { padding: 100px 9%; }
-    .intro { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
-    .intro-image { width: 100%; height: 440px; object-fit: cover; }
-    .section-title { font: 500 clamp(40px, 5vw, 60px)/1.05 'Cormorant Garamond', serif; margin: 18px 0 22px; color: var(--forest); }
-    .body-copy { color: #66736b; line-height: 1.9; font-size: 14px; }
-    .text-link { display: inline-block; margin-top: 25px; border-bottom: 1px solid var(--gold); padding-bottom: 8px; font-size: 12px; font-weight: 700; letter-spacing: 1px; }
-    .experiences { background: #eaece4; text-align: center; }
-    .center-copy { max-width: 550px; margin: 0 auto 45px; }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
-    .card { background: var(--cream); transition: transform .3s; }
-    .card:hover { transform: translateY(-7px); }
-    .card img { width: 100%; height: 240px; object-fit: cover; display: block; }
-    .card-content { padding: 25px; }
-    .card h3 { font: 600 30px 'Cormorant Garamond', serif; margin-bottom: 10px; color: var(--forest); }
-    .booking { background: var(--forest); color: white; text-align: center; }
-    .booking .section-title { color: white; }
-    .booking .body-copy { color: #d1dbd3; }
-    .booking .btn { margin-top: 25px; }
-    footer { background: var(--deep); color: #d4dcd5; padding: 35px 9%; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 12px; }
-    @keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    @media (max-width: 760px) {
-      .nav { height: auto; min-height: 75px; padding: 20px 6%; flex-wrap: wrap; gap: 15px; }
-      .nav-links { gap: 15px; flex-wrap: wrap; font-size: 10px; }
-      .nav-cta { padding: 9px; }
-      .hero { min-height: 580px; padding: 75px 7%; }
-      section { padding: 70px 7%; }
-      .intro { grid-template-columns: 1fr; gap: 35px; }
-      .intro-image { height: 320px; }
-      .cards { grid-template-columns: 1fr; }
-      .card img { height: 260px; }
-    }
-  </style>
+<style>
+:root {
+  --forest: #183b30;
+  --deep: #0d241d;
+  --gold: #d5b477;
+  --cream: #f7f5ef;
+  --muted: #68766d;
+  --white: #fff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+body { font-family: 'DM Sans', sans-serif; color: #25372e; background: var(--cream); }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+button, input, select, textarea { font: inherit; }
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  min-height: 78px; padding: 15px 7%;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; background: var(--deep); color: white;
+}
+.logo { font: 600 30px 'Cormorant Garamond', serif; letter-spacing: 2px; white-space: nowrap; }
+.logo span { color: var(--gold); }
+.nav-links { display: flex; align-items: center; gap: 25px; flex-wrap: wrap; }
+.nav-links a { font-size: 10px; letter-spacing: 1.4px; transition: color .25s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-links .nav-cta { border: 1px solid var(--gold); padding: 12px 16px; }
+.hero {
+  min-height: 680px; display: flex; align-items: center; padding: 100px 9%;
+  color: white; background:
+    linear-gradient(90deg, rgba(7,25,19,.84), rgba(7,25,19,.2)),
+    url('https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=2000&q=85') center/cover;
+}
+.hero-content { max-width: 680px; animation: rise 1s ease both; }
+.eyebrow { color: #b18b4d; font-size: 10px; font-weight: 700; letter-spacing: 3.5px; text-transform: uppercase; }
+.hero .eyebrow { color: var(--gold); }
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+h1 { font-size: clamp(60px, 9vw, 108px); line-height: .93; margin: 25px 0; }
+.hero p { max-width: 500px; color: #e4e8e2; line-height: 1.9; font-size: 14px; }
+.btn {
+  display: inline-block; margin-top: 30px; padding: 16px 24px;
+  background: var(--gold); color: var(--deep); border: 1px solid var(--gold);
+  font-size: 10px; font-weight: 700; letter-spacing: 1.4px;
+  cursor: pointer; transition: transform .25s, background .25s, color .25s;
+}
+.btn:hover { transform: translateY(-3px); background: transparent; color: var(--gold); }
+section { padding: 100px 9%; }
+.section-title { color: var(--forest); font-size: clamp(42px, 5.5vw, 66px); line-height: 1.02; margin: 17px 0 23px; }
+.body-copy { color: var(--muted); font-size: 13px; line-height: 1.95; }
+.intro { display: grid; grid-template-columns: 1fr 1fr; gap: 65px; align-items: center; }
+.intro-image { width: 100%; height: 470px; object-fit: cover; }
+.text-link { display: inline-block; margin-top: 25px; padding-bottom: 8px; border-bottom: 1px solid var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 1.3px; }
+.text-link:hover { color: #8b6b36; }
+.dark-section { background: var(--deep); color: white; text-align: center; }
+.dark-section .section-title { color: white; }
+.dark-section .body-copy { color: #c4d0c7; }
+.center-copy { max-width: 550px; margin: 0 auto 45px; }
+.gallery-grid { display: grid; grid-template-columns: 1.15fr .85fr .85fr; grid-template-rows: 220px 220px; gap: 15px; }
+.gallery-item { overflow: hidden; background: #d9ded6; }
+.gallery-item:first-child { grid-row: span 2; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.gallery-item:hover img { transform: scale(1.06); }
+.rooms-section { background: #e9ebe3; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 42px; }
+.section-heading .section-title { margin-bottom: 0; }
+.room-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.room-card { background: var(--cream); transition: transform .3s, box-shadow .3s; }
+.room-card:hover { transform: translateY(-6px); box-shadow: 0 16px 35px #173b3014; }
+.room-card img { width: 100%; height: 240px; object-fit: cover; }
+.room-info { padding: 24px; }
+.room-info h3 { font-size: 31px; color: var(--forest); margin-bottom: 8px; }
+.room-info .body-copy { min-height: 52px; }
+.room-meta { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 20px; padding-top: 17px; border-top: 1px solid #dedfd5; font-size: 10px; letter-spacing: .5px; }
+.price { color: var(--forest); font-weight: 700; }
+.price strong { font-size: 20px; }
+.room-info .text-link { margin-top: 18px; }
+.experiences { text-align: center; }
+.experience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 42px; text-align: left; }
+.experience-card img { width: 100%; height: 250px; object-fit: cover; }
+.experience-card h3 { font-size: 30px; margin: 20px 0 8px; color: var(--forest); }
+.experience-card p { max-width: 340px; }
+.booking { background: var(--forest); color: white; }
+.booking-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; }
+.booking .section-title { color: white; }
+.booking .body-copy { color: #d2ddd4; }
+.booking-details { margin-top: 32px; border-top: 1px solid #ffffff30; padding-top: 23px; }
+.booking-details p { margin: 10px 0; font-size: 12px; color: #d2ddd4; }
+.booking-form { background: var(--cream); color: var(--forest); padding: 35px; }
+.booking-form h3 { font-size: 34px; margin-bottom: 8px; }
+.form-intro { margin-bottom: 25px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.field input, .field select, .field textarea {
+  width: 100%; min-width: 0; padding: 13px;
+  border: 1px solid #d7dbd1; background: white; color: #25372e; border-radius: 0;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+.field textarea { min-height: 100px; resize: vertical; }
+.booking-form .btn { width: 100%; margin-top: 22px; }
+.form-note { margin-top: 12px; font-size: 10px; line-height: 1.6; color: var(--muted); }
+footer {
+  padding: 35px 9%; display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 18px;
+  background: #081a14; color: #d2dcd3; font-size: 11px;
+}
+footer .logo { color: white; }
+footer p { line-height: 1.7; }
+.back-top { color: var(--gold); }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s, transform .7s; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+@media (max-width: 850px) {
+  .nav { padding: 18px 5%; align-items: flex-start; flex-direction: column; }
+  .nav-links { gap: 16px; }
+  section { padding: 75px 6%; }
+  .hero { min-height: 590px; padding: 75px 7%; }
+  .intro, .booking-layout { grid-template-columns: 1fr; gap: 35px; }
+  .intro-image { height: 350px; }
+  .room-grid, .experience-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 240px 180px; }
+  .gallery-item:first-child { grid-row: auto; grid-column: span 2; }
+  .booking-layout { gap: 35px; }
+}
+@media (max-width: 540px) {
+  .logo { font-size: 27px; }
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 9px; }
+  .hero { min-height: 540px; }
+  h1 { font-size: 62px; }
+  section { padding: 65px 6%; }
+  .room-grid, .experience-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 210px 140px 140px; gap: 9px; }
+  .gallery-item:first-child { grid-column: span 2; }
+  .section-heading { display: block; }
+  .booking-form { padding: 23px 18px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .field.full { grid-column: auto; }
+  footer { align-items: flex-start; flex-direction: column; }
+}
+</style>
 </head>
+
 <body>
-  <header class="nav">
-    <a class="logo" href="#">RESORT <span>DEEP</span></a>
-    <nav class="nav-links">
-      <a href="#home">HOME</a>
-      <a href="#about">ABOUT</a>
-      <a href="#experiences">EXPERIENCES</a>
-      <a href="#contact" class="nav-cta">ENQUIRE NOW</a>
-    </nav>
-  </header>
+<header class="nav" id="top">
+  <a class="logo" href="#home">RESORT <span>DEEP</span></a>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#rooms">ROOMS</a>
+    <a href="#experiences">EXPERIENCES</a>
+    <a href="#contact" class="nav-cta">ENQUIRE NOW</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <div class="eyebrow">A quieter kind of luxury</div>
-        <h1>Find your<br>own escape.</h1>
-        <p>Step away from the ordinary. Discover peaceful surroundings, thoughtful comfort and moments that stay with you long after you leave.</p>
-        <a class="btn" href="#contact">DISCOVER YOUR STAY ↗</a>
-      </div>
-    </section>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="eyebrow">A quieter kind of luxury</div>
+      <h1>Find your<br>own escape.</h1>
+      <p>Step away from the ordinary. Discover peaceful surroundings, thoughtful comfort and moments that stay with you long after you leave.</p>
+      <a class="btn" href="#rooms">DISCOVER YOUR STAY ↗</a>
+    </div>
+  </section>
 
-    <section class="intro" id="about">
+  <section class="intro reveal" id="about">
+    <div>
+      <div class="eyebrow">Welcome to Resort Deep</div>
+      <h2 class="section-title">Where nature meets understated luxury.</h2>
+      <p class="body-copy">Some places invite you to slow down. Resort Deep is a concept for a restful escape, where natural beauty and considered design create room to breathe, reconnect and recharge.</p>
+      <a class="text-link" href="#gallery">EXPLORE OUR WORLD ↗</a>
+    </div>
+    <img class="intro-image" loading="lazy" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1100&q=85" alt="A resort pool surrounded by tropical greenery">
+  </section>
+
+  <section class="dark-section reveal" id="gallery">
+    <div class="eyebrow">A glimpse of the extraordinary</div>
+    <h2 class="section-title">Discover the beauty of escape.</h2>
+    <p class="body-copy center-copy">Spaces designed for stillness. Views that invite you to stay a little longer.</p>
+    <div class="gallery-grid">
+      <a class="gallery-item" href="#rooms" aria-label="Explore our luxury stays">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=85" alt="Luxury villa surrounded by tropical landscape">
+      </a>
+      <a class="gallery-item" href="#experiences" aria-label="Explore poolside experiences">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=85" alt="A calm outdoor swimming pool">
+      </a>
+      <a class="gallery-item" href="#rooms" aria-label="Explore guest rooms">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=85" alt="An elegant guest bedroom">
+      </a>
+      <a class="gallery-item" href="#experiences" aria-label="Explore dining">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=85" alt="An elegant dining table prepared for guests">
+      </a>
+    </div>
+  </section>
+
+  <section class="rooms-section reveal" id="rooms">
+    <div class="section-heading">
       <div>
-        <div class="eyebrow">Welcome to Resort Deep</div>
-        <h2 class="section-title">Where nature meets understated luxury.</h2>
-        <p class="body-copy">Some places invite you to slow down. Resort Deep is a concept for a restful escape, where natural beauty and considered design create room to breathe, reconnect and recharge.</p>
-        <a class="text-link" href="#experiences">EXPLORE THE EXPERIENCE ↗</a>
+        <div class="eyebrow">Stay your way</div>
+        <h2 class="section-title">Rooms made for<br>rest and renewal.</h2>
       </div>
-      <img class="intro-image" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=85" alt="Resort swimming pool surrounded by greenery">
-    </section>
+      <p class="body-copy">Find a space to call your own,<br>surrounded by thoughtful details.</p>
+    </div>
+    <div class="room-grid">
+      <article class="room-card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85" alt="Comfortable and elegant deluxe room">
+        <div class="room-info">
+          <h3>Deluxe Retreat</h3>
+          <p class="body-copy">A welcoming sanctuary for peaceful nights and slow mornings.</p>
+          <div class="room-meta"><span>2 GUESTS · 1 BED</span><span class="price"><strong>₹4,999</strong> / night</span></div>
+          <a class="text-link" href="#contact" data-room="Deluxe Retreat">ENQUIRE ABOUT THIS ROOM ↗</a>
+        </div>
+      </article>
+      <article class="room-card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=900&q=85" alt="Private luxury villa with contemporary architecture">
+        <div class="room-info">
+          <h3>Garden Villa</h3>
+          <p class="body-copy">A private-feeling hideaway inspired by the calm of nature.</p>
+          <div class="room-meta"><span>2 GUESTS · 1 BED</span><span class="price"><strong>₹7,499</strong> / night</span></div>
+          <a class="text-link" href="#contact" data-room="Garden Villa">ENQUIRE ABOUT THIS ROOM ↗</a>
+        </div>
+      </article>
+      <article class="room-card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Spacious luxury suite with a beautiful interior">
+        <div class="room-info">
+          <h3>Signature Suite</h3>
+          <p class="body-copy">Extra room to unwind, with comfort in every considered detail.</p>
+          <div class="room-meta"><span>2–4 GUESTS</span><span class="price"><strong>₹9,999</strong> / night</span></div>
+          <a class="text-link" href="#contact" data-room="Signature Suite">ENQUIRE ABOUT THIS ROOM ↗</a>
+        </div>
+      </article>
+    </div>
+    <p class="form-note">Room names, facilities and prices are illustrative examples for this website concept, not confirmed offers.</p>
+  </section>
 
-    <section class="experiences" id="experiences">
-      <div class="eyebrow">Made for your moments</div>
-      <h2 class="section-title">A stay to remember.</h2>
-      <p class="body-copy center-copy">From slow mornings to peaceful evenings, make space for the things that matter most.</p>
-      <div class="cards">
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=85" alt="Elegant and comfortable guest room">
-          <div class="card-content">
-            <h3>Restful Retreats</h3>
-            <p class="body-copy">Thoughtfully designed spaces to unwind and recharge.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=800&q=85" alt="Outdoor resort swimming pool">
-          <div class="card-content">
-            <h3>Poolside Calm</h3>
-            <p class="body-copy">Take a breath, slow down and enjoy a quieter pace.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=85" alt="Beautifully arranged restaurant dining">
-          <div class="card-content">
-            <h3>Dining Moments</h3>
-            <p class="body-copy">A welcoming setting for good food and great company.</p>
-          </div>
-        </article>
+  <section class="experiences reveal" id="experiences">
+    <div class="eyebrow">Made for your moments</div>
+    <h2 class="section-title">A stay to remember.</h2>
+    <p class="body-copy center-copy">From slow mornings to peaceful evenings, make space for the things that matter most.</p>
+    <div class="experience-grid">
+      <article class="experience-card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=850&q=85" alt="Peaceful resort swimming pool">
+        <h3>Poolside Calm</h3>
+        <p class="body-copy">Take a breath, slow down and enjoy a quieter pace.</p>
+      </article>
+      <article class="experience-card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=850&q=85" alt="Beautiful restaurant dining setup">
+        <h3>Dining Moments</h3>
+        <p class="body-copy">A welcoming setting for good food and great company.</p>
+      </article>
+      <article class="experience-card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=850&q=85" alt="A tranquil hospitality retreat surrounded by nature">
+        <h3>Nature & Stillness</h3>
+        <p class="body-copy">Make time for quiet moments and a change of scenery.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="booking" id="contact">
+    <div class="booking-layout">
+      <div>
+        <div class="eyebrow">Your escape starts here</div>
+        <h2 class="section-title">Let's make room for something wonderful.</h2>
+        <p class="body-copy">Interested in a future stay? Send us your preferred dates and we'll help you start planning your escape.</p>
+        <div class="booking-details">
+          <p>✦ Thoughtful stays</p>
+          <p>✦ Peaceful surroundings</p>
+          <p>✦ Personalised enquiries</p>
+        </div>
       </div>
-    </section>
 
-    <section class="booking" id="contact">
-      <div class="eyebrow">Your escape starts here</div>
-      <h2 class="section-title">Ready for a change of pace?</h2>
-      <p class="body-copy">Get in touch to learn more about a future stay at Resort Deep.</p>
-      <a class="btn" href="mailto:hello@example.com?subject=Resort%20Deep%20Enquiry">MAKE AN ENQUIRY ↗</a>
-    </section>
-  </main>
+      <form class="booking-form" id="bookingForm">
+        <h3>Plan your stay</h3>
+        <p class="body-copy form-intro">Share a few details to prepare your enquiry.</p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="guestName">Full name</label>
+            <input id="guestName" name="name" autocomplete="name" required placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="guestEmail">Email address</label>
+            <input id="guestEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="checkin">Check-in</label>
+            <input id="checkin" name="checkin" type="date" required>
+          </div>
+          <div class="field">
+            <label for="checkout">Check-out</label>
+            <input id="checkout" name="checkout" type="date" required>
+          </div>
+          <div class="field">
+            <label for="guests">Guests</label>
+            <select id="guests" name="guests" required>
+              <option value="1">1 guest</option>
+              <option value="2" selected>2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5+">5+ guests</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="room">Preferred room</label>
+            <select id="room" name="room" required>
+              <option value="Not sure yet">Not sure yet</option>
+              <option value="Deluxe Retreat">Deluxe Retreat</option>
+              <option value="Garden Villa">Garden Villa</option>
+              <option value="Signature Suite">Signature Suite</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="message">Anything else? (optional)</label>
+            <textarea id="message" name="message" placeholder="Tell us about your plans..."></textarea>
+          </div>
+        </div>
+        <button class="btn" type="submit">PREPARE MY ENQUIRY ↗</button>
+        <p class="form-note">This demo prepares an email in your email app. It does not confirm availability or make a reservation.</p>
+      </form>
+    </div>
+  </section>
+</main>
 
-  <footer>
-    <a class="logo" href="#">RESORT <span>DEEP</span></a>
-    <p>Designed for slower days and memorable stays.</p>
-    <p>© 2026 Resort Deep · Website concept</p>
-  </footer>
+<footer>
+  <a class="logo" href="#home">RESORT <span>DEEP</span></a>
+  <p>Designed for slower days and memorable stays.</p>
+  <p>© <span id="year">2026</span> Resort Deep · Website concept</p>
+  <a class="back-top" href="#top">BACK TO TOP ↑</a>
+</footer>
+
+<script>
+const today = new Date();
+const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+  .toISOString().split("T")[0];
+
+const checkin = document.getElementById("checkin");
+const checkout = document.getElementById("checkout");
+
+checkin.min = localDate;
+checkout.min = localDate;
+
+checkin.addEventListener("change", () => {
+  checkout.min = checkin.value || localDate;
+  if (checkout.value && checkout.value <= checkin.value) {
+    checkout.value = "";
+  }
+});
+
+document.querySelectorAll("[data-room]").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("room").value = link.dataset.room;
+  });
+});
+
+document.getElementById("bookingForm").addEventListener("submit", event => {
+  event.preventDefault();
+
+  if (checkout.value <= checkin.value) {
+    alert("Please choose a check-out date after your check-in date.");
+    return;
+  }
+
+  const data = new FormData(event.currentTarget);
+  const subject = "Resort Deep Stay Enquiry";
+  const body = [
+    "Hello Resort Deep,",
+    "",
+    "I would like to enquire about a stay.",
+    "",
+    "Name: " + data.get("name"),
+    "Email: " + data.get("email"),
+    "Check-in: " + data.get("checkin"),
+    "Check-out: " + data.get("checkout"),
+    "Guests: " + data.get("guests"),
+    "Preferred room: " + data.get("room"),
+    "Additional details: " + (data.get("message") || "None"),
+    "",
+    "Please let me know about availability and pricing."
+  ].join("\n");
+
+  const email = "hello@example.com";
+  window.location.href =
+    "mailto:" + email +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(".reveal").forEach(element => observer.observe(element));
+} else {
+  document.querySelectorAll(".reveal").forEach(element => element.classList.add("visible"));
+}
+</script>
 </body>
 </html>
