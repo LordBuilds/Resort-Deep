@@ -766,7 +766,46 @@ document.querySelectorAll("[data-room]").forEach(link => {
   });
 });
 
-document.getElementById("bookingForm").addEventListener("submit", event => {
+
+
+const roomRates = {
+  "Deluxe Retreat": 4999,
+  "Garden Villa": 7499,
+  "Signature Suite": 9999
+};
+
+const roomSelect = document.getElementById("room");
+const nightsOutput = document.getElementById("stayNights");
+const totalOutput = document.getElementById("stayTotal");
+
+function updateStayEstimate() {
+  if (!checkin.value || !checkout.value ||
+      checkout.value <= checkin.value) {
+    nightsOutput.textContent = "Select valid dates";
+    totalOutput.textContent = "—";
+    return;
+  }
+
+  const start = new Date(checkin.value + "T00:00:00");
+  const end = new Date(checkout.value + "T00:00:00");
+  const nights = Math.round((end - start) / 86400000);
+
+  nightsOutput.textContent =
+    nights + (nights === 1 ? " night" : " nights");
+
+  const rate = roomRates[roomSelect.value];
+
+  totalOutput.textContent = rate
+    ? "₹" + (rate * nights).toLocaleString("en-IN")
+    : "Choose a room";
+}
+
+checkin.addEventListener("change", updateStayEstimate);
+checkout.addEventListener("change", updateStayEstimate);
+roomSelect.addEventListener("change", updateStayEstimate);
+
+updateStayEstimate();
+  document.getElementById("bookingForm").addEventListener("submit", event => {
   event.preventDefault();
 
   if (checkout.value <= checkin.value) {
