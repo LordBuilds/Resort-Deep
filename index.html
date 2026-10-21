@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resort Deep | Escape to Nature</title>
+  <meta name="description" content="Discover Resort Deep, your peaceful escape into nature. Explore our resort and plan your stay.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: #101b18;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 8%;
+      background: #101b18;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 10%;
+      background:
+        linear-gradient(90deg, rgba(8, 20, 16, .85), rgba(8, 20, 16, .15)),
+        url("https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 620px;
+    }
+
+    .eyebrow {
+      color: #d5bd88;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 1.08;
+      margin: 20px 0;
+    }
+
+    .hero p {
+      max-width: 460px;
+      color: #e3e8e4;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 25px;
+      background: #c6a66b;
+      color: #17211b;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 3px;
+    }
+
+    section {
+      padding: 75px 10%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-family: Georgia, serif;
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #c8d0cb;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .feature {
+      padding: 28px 20px;
+      border: 1px solid #35453c;
+      border-radius: 6px;
+    }
+
+    .feature .symbol {
+      font-size: 30px;
+    }
+
+    .feature h3 {
+      margin: 12px 0 8px;
+      color: #e0c28a;
+    }
+
+    .feature p {
+      color: #c8d0cb;
+      font-size: 15px;
+    }
+
+    #contact {
+      background: #1b2b24;
+    }
+
+    footer {
+      padding: 25px;
+      text-align: center;
+      color: #aab8af;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        padding: 18px 5%;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: 75vh;
+        padding: 55px 7%;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 7%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">RESORT DEEP</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#stay">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Your peaceful escape</div>
+      <h1>Find your own kind of paradise.</h1>
+      <p>
+        Step away from the everyday and discover a place
+        where nature, comfort, and unforgettable moments
+        come together.
+      </p>
+      <a class="btn" href="#contact">Plan Your Stay</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <p class="eyebrow">Welcome to Resort Deep</p>
+    <h2>More than a getaway.</h2>
+    <p class="intro">
+      A thoughtfully designed resort experience for slowing
+      down, reconnecting with nature, and making time for
+      the moments that matter.
+    </p>
+  </section>
+
+  <section id="stay">
+    <p class="eyebrow">Discover your escape</p>
+    <h2>The experience</h2>
+
+    <div class="features">
+      <article class="feature">
+        <div class="symbol">🌿</div>
+        <h3>Nature & Calm</h3>
+        <p>Find a little more space to breathe, relax, and recharge.</p>
+      </article>
+
+      <article class="feature">
+        <div class="symbol">🛏️</div>
+        <h3>Comfortable Stays</h3>
+        <p>A welcoming place to unwind after a day of exploring.</p>
+      </article>
+
+      <article class="feature">
+        <div class="symbol">✨</div>
+        <h3>Special Moments</h3>
+        <p>Make room for memorable experiences with your favourite people.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <p class="eyebrow">Your next escape awaits</p>
+    <h2>Let's plan your stay.</h2>
+    <p class="intro">
+      Interested in visiting Resort Deep? Get in touch to
+      enquire about your stay.
+    </p>
+    <a class="btn" href="mailto:hello@example.com?subject=Resort%20Deep%20Enquiry">
+      Send an Enquiry
+    </a>
+  </section>
+
+  <footer>
+    © 2026 Resort Deep · Website concept
+  </footer>
+</body>
+</html>
